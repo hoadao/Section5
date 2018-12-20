@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao va thao tac voi mang</title>
+</head>
+<body>
+    <input type="text" id="textValue"/>
+    <button id="add" onclick="addFunction()">Add</button>
+    <button id="show" onclick="showFunction()">Show</button>
+    <div id="result"></div>
+    <script>
+        var mang=new Array();
+        var x=0;
+        function addFunction() {
+            mang[x]=document.getElementById("textValue").value;
+            alert(mang[x]);
+            x++;
+
+        }
+        function showFunction() {
+            var e ="<hr/>";
+            for(var i=0;i<mang.length;i++){
+                e+="Element number "+i+" : "+mang[i]+"</br>";
+            }
+            document.getElementById("result").innerHTML=e;
+        }
+    </script>
+</body>
+</html>

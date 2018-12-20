@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim phan tu trong mang</title>
+</head>
+<body>
+    <script>
+        var soCanTim=prompt("Nhap vao so can tim: ");
+        var mang= [1,2,3,4,5,6,7,8,9,0];
+        var timKiem=false;
+        for(var i=0;i<mang.length;i++){
+            if(mang[i]==soCanTim){
+                document.write("Gia tri can tim o vi tri: "+i);
+                timKiem=true;
+            }
+        }
+        if(timKiem==false){
+            document.write("Khong co gia tri can tim trong mang...");
+        }
+    </script>
+</body>
+</html>

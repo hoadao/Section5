@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xu li chuoi so</title>
+</head>
+<body>
+    <script>
+        var nhap=prompt("Nhap vao chuoi so: ");
+        var chuoiSo=nhap.toString();
+        var ketqua=[chuoiSo[0]];
+        for(var i=1;i<chuoiSo.length;i++){
+            if(chuoiSo[i-1]%2===0&&chuoiSo[i]%2==0){
+                ketqua.push('-',chuoiSo[i]);
+            }
+            else{
+                ketqua.push(chuoiSo[i]);
+            }
+        }
+        console.log(ketqua.join(''));
+    </script>
+</body>
+</html>

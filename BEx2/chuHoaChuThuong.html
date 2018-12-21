@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toUpperCase()</title>
+</head>
+<body>
+    <script>
+        var nhap=prompt("Nhap vao chuoi: ");
+        var chuoi=nhap.toString();
+        var ketQua=[];
+        for(var i=0;i<chuoi.length;i++){
+            if(chuoi[i]==chuoi[i].toUpperCase()){
+                ketQua.push(chuoi[i].toLowerCase());
+            }
+            else{
+                ketQua.push(chuoi[i].toUpperCase());
+            }
+        }
+        document.write(ketQua.join(''));
+
+    </script>
+</body>
+</html>

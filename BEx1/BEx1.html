@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Co caro</title>
+</head>
+<body>
+    <h1> Game cờ caro</h1>
+    <div id="result"></div>
+    <input type="button" value="Thay giá trị" onclick="changeFunction()"/>
+    <script>
+        var b = document.getElementById("result");
+
+        var board = [];
+        var data = "";
+        for(var i = 0; i < 5; i++) {
+            board[i] = [0, 0, 0, 0, 0];
+        }
+        for(var i = 0; i < 5; i++) {
+            data += "<br/>";
+            for(var j = 0; j < 5; j++){
+                data += board[i][j] + "&nbsp;&nbsp;";
+            }
+        }
+        //data += "<br/><br/><input type='button' value='Thay giá trị' onclick='changeFunction()'>";
+        b.innerHTML=data;
+        function changeFunction() {
+            var x=prompt("Nhap toa do x: ");
+            var y=prompt("Nhap toa do y: ");
+            data = "";
+            board[x][y] = "x";
+            for(var i = 0; i < 5; i++) {
+                data += "<br/>";
+                for(var j = 0; j < 5; j++){
+                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
+            }
+            //data += "<br/><br/><input type='button' value='Thay giá trị' onclick='changeFunction()'>";
+            b.innerHTML = "<hr/>"+ data;
+
+        }
+    </script>
+</body>
+</html>

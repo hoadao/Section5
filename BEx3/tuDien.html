@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien tieng anh</title>
+</head>
+<body>
+    <input type="text" id="traTu">
+    <button id="search" onclick="timKiem()">Tìm kiếm</button></br>
+    Nghĩa tiếng Việt: </br>
+    <div id="result"></div>
+    <script>
+        var tuTiengAnh=["one","two","three","four","five","six","seven","eight","night","ten"];
+        var nghiaTiengViet=["Một","Hai","Ba","Bốn","Năm","Sáu","Bảy","Tám","Chín","Mười"];
+        function timKiem() {
+            var tu = document.getElementById("traTu").value;
+            for(var i=0;i<tuTiengAnh.length;i++){
+                if (tuTiengAnh[i]==tu){
+                    document.getElementById("result").innerHTML=nghiaTiengViet[i];
+                }
+            }
+        }
+    </script>
+</body>
+</html>
